@@ -1,0 +1,14 @@
+{
+  "data_path": "data/MES_2023.csv",
+  "cash": 100000.0,
+  "fast_period": 20,
+  "slow_period": 50,
+  "target_vol": 0.1,
+  "vol_lookback": 10,
+  "max_leverage": 2.0,
+  "commission_perc": 0.0,
+  "slippage_multiplier": 0.25,
+  "min_volume_pct_avg": 0.2,
+  "min_holding_period": 1,
+  "max_spread_pct": null
+}
