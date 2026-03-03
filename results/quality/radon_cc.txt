@@ -1,0 +1,69 @@
+src/compare.py
+    F 25:0 run_backtest_with_equity - A (5)
+    F 129:0 main - A (3)
+    F 89:0 plot_equity_curves - A (1)
+src/microstructure.py
+    C 26:0 MicrostructureStrategy - A (3)
+    M 70:4 MicrostructureStrategy._spread_ok - A (3)
+    M 87:4 MicrostructureStrategy.micro_ok - A (3)
+    M 47:4 MicrostructureStrategy.notify_trade - A (2)
+    M 54:4 MicrostructureStrategy._liquidity_ok - A (2)
+    C 11:0 MicrostructureConfig - A (1)
+    M 42:4 MicrostructureStrategy.__init__ - A (1)
+    M 51:4 MicrostructureStrategy.next - A (1)
+    M 64:4 MicrostructureStrategy._holding_period_ok - A (1)
+src/calibrate_step1.py
+    F 215:0 main - B (8)
+    F 42:0 calmar_ratio - A (4)
+    F 80:0 run_backtest - A (2)
+    F 179:0 run_case - A (2)
+    F 57:0 pick_best - A (1)
+    F 74:0 load_ohlcv_csv - A (1)
+src/metrics.py
+    F 6:0 compute_metrics - C (11)
+src/execution.py
+    F 27:0 estimate_highlow_spread - A (1)
+    F 52:0 calibrate_execution_params - A (1)
+    C 12:0 ExecutionParams - A (1)
+src/baseline_bot.py
+    M 21:4 SmaCrossStrategy.next - B (8)
+    C 11:0 SmaCrossStrategy - A (5)
+    M 37:4 SmaCrossStrategy.notify_trade - A (3)
+    F 48:0 run_backtest - A (1)
+    M 14:4 SmaCrossStrategy.__init__ - A (1)
+src/plotting.py
+    F 14:0 plot_candlestick_with_trades - C (11)
+    F 90:0 plot_equity_comparison - A (1)
+src/enchanced_bot.py
+    M 58:4 EnhancedSmaCross.next - B (9)
+    C 20:0 EnhancedSmaCross - A (5)
+    M 49:4 EnhancedSmaCross.notify_trade - A (3)
+    F 85:0 load_ohlcv_csv - A (1)
+    F 97:0 run_backtest - A (1)
+    F 186:0 main - A (1)
+    M 35:4 EnhancedSmaCross.__init__ - A (1)
+src/risk.py
+    M 74:4 VolatilityTargetSizer._getsizing - B (7)
+    C 7:0 VolatilityTargetSizer - B (6)
+    M 39:4 VolatilityTargetSizer._estimate_ann_vol - B (6)
+    M 32:4 VolatilityTargetSizer.__init__ - A (1)
+src/reality_check.py
+    F 252:0 main - C (11)
+    M 78:4 EnhancedSmaCross.next - B (9)
+    M 47:4 BaselineSmaCross.next - B (8)
+    C 38:0 BaselineSmaCross - B (6)
+    C 64:0 EnhancedSmaCross - B (6)
+    F 201:0 mbb_sample_indices - A (4)
+    F 214:0 reality_check_white - A (3)
+    F 103:0 project_root_from_here - A (2)
+    F 119:0 equity_to_returns - A (2)
+    F 113:0 load_ohlcv_csv - A (1)
+    F 131:0 run_baseline_returns - A (1)
+    F 149:0 run_enhanced_returns - A (1)
+    M 41:4 BaselineSmaCross.__init__ - A (1)
+    M 71:4 EnhancedSmaCross.__init__ - A (1)
+src/utils.py
+    F 7:0 prepare_csv - B (9)
+
+55 blocks (classes, functions, methods) analyzed.
+Average complexity: A (3.5272727272727273)

@@ -1,0 +1,32 @@
+TESTE DE MUTAÇÃO — TCC USP Eng 2025
+======================================================================
+
+Total de mutações:    20
+Mutações válidas:     20
+Mutantes mortos:      16
+Mutantes sobreviventes: 4
+Mutações puladas:     0
+Mutation Score:       80.0%
+
+Detalhamento:
+----------------------------------------------------------------------
+  [ SOBREVIVEU] metrics: troca fator de anualização Sharpe 252 → 365
+  [      MORTO] metrics: Sharpe default quando std=0: 0 → 1
+  [ SOBREVIVEU] metrics: inverte filtro downside > 0 (deveria ser < 0)
+  [      MORTO] metrics: troca - por + no cálculo do drawdown
+  [      MORTO] metrics: troca fator de anualização do retorno 252 → 365
+  [      MORTO] metrics: troca .min() por .max() no drawdown
+  [      MORTO] metrics: Sortino default quando downside_std=0: 0 → 1
+  [      MORTO] execution: troca h-l por h+l no cálculo do spread
+  [      MORTO] execution: troca divisor do half_spread: 2.0 → 3.0
+  [      MORTO] execution: troca * por + no slippage
+  [      MORTO] execution: troca divisor da média: 2.0 → 3.0
+  [ SOBREVIVEU] risk: altera guarda de preço: <= 0 → <= -1
+  [      MORTO] risk: soma 1 ao max_leverage no capping
+  [      MORTO] risk: soma 100 ao min_size check
+  [      MORTO] risk: troca / por * na exposição raw
+  [      MORTO] risk: troca ddof de 1 para 0 no cálculo de vol
+  [      MORTO] micro: inverte comparação de liquidez >= → <=
+  [      MORTO] micro: inverte comparação do holding period >= → <=
+  [ SOBREVIVEU] micro: incremento do contador de barras: 1 → 2
+  [      MORTO] micro: troca 'and' por 'or' no micro_ok
