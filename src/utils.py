@@ -1,10 +1,10 @@
 import pandas as pd
 import os
 
-import pandas as pd
-import os
-
 def prepare_csv(input_path="data/MES_2023.csv", output_path="data/MES_2023_clean.csv"):
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    input_path = os.path.join(project_root, input_path)
+    output_path = os.path.join(project_root, output_path)
     print(f"🔧 Limpando dataset: {input_path}")
     df = pd.read_csv(input_path)
 
