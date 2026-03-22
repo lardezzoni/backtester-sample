@@ -14,7 +14,7 @@ import numpy as np
 def plot_candlestick_with_trades(
     df: pd.DataFrame,
     trades: list,
-    title: str = "Estratégia SMA Crossover",
+    title: str = "SMA Crossover Strategy",
     output_path: str = "chart.png",
     sma_short: int = 10,
     sma_long: int = 20,
@@ -47,11 +47,11 @@ def plot_candlestick_with_trades(
 
     # Plot price as a line with high-low range shading
     ax.fill_between(dates, df['Low'], df['High'], alpha=0.3, color='gray', label='_nolegend_')
-    ax.plot(dates, df['Close'], color='black', linewidth=1, label='Preço de Fechamento')
+    ax.plot(dates, df['Close'], color='black', linewidth=1, label='Closing Price')
 
     # Plot SMAs
-    ax.plot(dates, df['SMA10'], color='#2E86AB', linewidth=1.5, label=f'MMS({sma_short})')
-    ax.plot(dates, df['SMA20'], color='#E94F37', linewidth=1.5, label=f'MMS({sma_long})')
+    ax.plot(dates, df['SMA10'], color='#2E86AB', linewidth=1.5, label=f'SMA({sma_short})')
+    ax.plot(dates, df['SMA20'], color='#E94F37', linewidth=1.5, label=f'SMA({sma_long})')
 
     # Plot trades
     buys = [t for t in trades if t['type'] == 'buy']
@@ -61,17 +61,17 @@ def plot_candlestick_with_trades(
         buy_dates = [t['date'] for t in buys]
         buy_prices = [t['price'] for t in buys]
         ax.scatter(buy_dates, buy_prices, marker='^', color='green', s=100,
-                   zorder=5, label='Compra')
+                   zorder=5, label='Buy')
 
     if sells:
         sell_dates = [t['date'] for t in sells]
         sell_prices = [t['price'] for t in sells]
         ax.scatter(sell_dates, sell_prices, marker='v', color='red', s=100,
-                   zorder=5, label='Venda')
+                   zorder=5, label='Sell')
 
     # Formatting
     ax.set_xlabel('Data', fontsize=11)
-    ax.set_ylabel('Preço (USD)', fontsize=11)
+    ax.set_ylabel('Price (USD)', fontsize=11)
     ax.set_title(title, fontsize=13, fontweight='bold')
     ax.legend(loc='upper left', fontsize=10)
     ax.grid(True, alpha=0.3, linestyle='--')

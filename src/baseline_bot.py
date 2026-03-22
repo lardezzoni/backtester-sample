@@ -81,10 +81,9 @@ def run_backtest(data_path="data/MES_2023.csv", cash=100000.0):
     plot_candlestick_with_trades(
         df=df,
         trades=trades,
-        title="Baseline: Estratégia SMA Crossover (10/20)",
+        title="Baseline: SMA Crossover Strategy (10/20)",
         output_path="results/baseline/baseline_candlestick.png",
     )
-
     compute_metrics(df, results, out_dir="results/baseline", equity_curve=strat.equity_curve)
 
     return results, df, trades, strat.equity_curve
