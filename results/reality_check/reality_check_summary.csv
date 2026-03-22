@@ -1,0 +1,2 @@
+N_variations,T_days,benchmark,bootstrap_B,block_len,T_obs,p_value,alpha,decision
+19,200,Baseline SMA(10/20),2000,10,0.0009803339554876071,0.49075462268865566,0.05,NÃO rejeita H0 (evidência insuficiente após ajuste)
