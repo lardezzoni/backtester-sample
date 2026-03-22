@@ -1,7 +1,7 @@
 # src/compare.py
 """
-Script para gerar comparacao entre baseline e enhanced bot.
-Gera a equity curve (curva de capital) comparativa.
+Script to generate comparison between baseline and enhanced bot.
+Generates the comparative equity curve.
 """
 import os
 import sys
@@ -101,12 +101,12 @@ def plot_equity_curves(
 
     ax.plot(baseline_dates, baseline_equity, label="Baseline (SMA Cross)",
             color="#1f77b4", linewidth=1.5)
-    ax.plot(enhanced_dates, enhanced_equity, label="Aprimorado (Microestrutura + Vol. Targeting)",
+    ax.plot(enhanced_dates, enhanced_equity, label="Enhanced (Microstructure + Vol. Targeting)",
             color="#ff7f0e", linewidth=1.5)
 
-    ax.set_xlabel("Data", fontsize=11)
-    ax.set_ylabel("Valor do Portfólio (USD)", fontsize=11)
-    ax.set_title("Curva de Capital: Baseline vs Aprimorado", fontsize=12, fontweight='bold')
+    ax.set_xlabel("Date", fontsize=11)
+    ax.set_ylabel("Portfolio Value (USD)", fontsize=11)
+    ax.set_title("Equity Curve: Baseline vs Enhanced", fontsize=12, fontweight='bold')
     ax.legend(loc='upper left', fontsize=10)
     ax.grid(True, alpha=0.3)
 
@@ -115,7 +115,7 @@ def plot_equity_curves(
 
     # Add annotation for academic caption
     fig.text(0.5, -0.02,
-             "Figura — Comparacao da evolucao do capital entre estrategia baseline e aprimorada.",
+             "Figure — Equity curve comparison between baseline and enhanced strategies.",
              ha='center', fontsize=9, style='italic')
 
     plt.tight_layout()
